@@ -2,4 +2,5 @@
     <string name="app_name">ONGAndroid</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_txt">Bienvenidos a SOMOS MAS ONG</string>
+    <string name="logo">Logo</string>
 </resources>
