@@ -43,6 +43,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def lifecycle_version = "2.2.0"
     def nav_version = "2.4.0"
 
@@ -70,6 +71,15 @@ dependencies {
     //Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //Circular ImageView
+    implementation "de.hdodenhof:circleimageview:3.1.0"
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:2.71828"
+
+    //Carousel
+    implementation "com.mig35:carousellayoutmanager:1.4.6"
 
 
     testImplementation 'junit:junit:'
