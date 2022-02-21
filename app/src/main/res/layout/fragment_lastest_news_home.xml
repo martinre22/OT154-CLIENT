@@ -24,6 +24,7 @@
         android:layout_height="300dp"
         android:layout_marginTop="10dp"
         android:padding="5dp"
+        app:carouselType="SHOWCASE"
         />
 
 

@@ -32,8 +32,10 @@ class LastestNewsHomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.lastestNewsCarousel.addData(lastestNewsViewModel.items)
+
+        binding.lastestNewsCarousel.addData(lastestNewsViewModel.addItems())
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
