@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_activities" />
     <fragment
         android:id="@+id/navFragmentHome"
-        android:name="com.melvin.ongandroid.view.Home"
+        android:name="com.melvin.ongandroid.view.home.HomeFragment"
         android:label="Inicio"
         tools:layout="@layout/fragment_home" />
     <fragment
