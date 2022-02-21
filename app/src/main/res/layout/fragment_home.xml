@@ -31,7 +31,7 @@
                 android:layout_margin="8dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/logo"
-                android:contentDescription="@string/logo" />
+                android:contentDescription="@string/somos_mas_logo_description" />
 
             <TextView
                 android:id="@+id/welcome_txt"
