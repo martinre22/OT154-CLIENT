@@ -81,6 +81,8 @@ dependencies {
     //Carousel
     implementation "com.mig35:carousellayoutmanager:1.4.6"
 
+    //Glide
+    implementation "com.github.bumptech.glide:glide:4.11.0"
 
     testImplementation 'junit:junit:'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

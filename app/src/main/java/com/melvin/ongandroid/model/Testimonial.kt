@@ -6,8 +6,9 @@ data class Testimonial(
     @SerializedName("id") val id:Int,
     @SerializedName("name") val name:String,
     @SerializedName("image") val image:String,
-    @SerializedName("description") val description:String,
-    @SerializedName("message") val message:String,
-
+    @SerializedName("description") val description:String
 ){
+    val descriptionQuotationMarks : String
+    get() = "\"$description\""
+
 }
