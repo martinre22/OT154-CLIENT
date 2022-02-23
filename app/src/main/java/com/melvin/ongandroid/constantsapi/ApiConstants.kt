@@ -1,4 +1,4 @@
-package com.melvin.ongandroid.data.apiservice
+package com.melvin.ongandroid.constantsapi
 
 /**
  * Este objeto representa las constantes de la API con sus respectivos valores
@@ -9,6 +9,5 @@ package com.melvin.ongandroid.data.apiservice
 object ApiConstants {
 
     const val BASE_URL = "http://ongapi.alkemy.org/"
-    const val SLIDES_END_POINT = "api/slides"
 
 }

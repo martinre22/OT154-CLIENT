@@ -4,15 +4,27 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.melvin.ongandroid.bussinesslogic.GetActivitiesInteractor
 
+import com.melvin.ongandroid.bussinesslogic.GetActivitiesInteractor
 import com.melvin.ongandroid.model.apimodel.ActivityModel
 import kotlinx.coroutines.launch
 import org.imaginativeworld.whynotimagecarousel.CarouselItem
 
 
 class HomeViewModel : ViewModel() {
-    var imageHomeList = mutableListOf<CarouselItem>()
+
+    private var getActivitiesInteractor = GetActivitiesInteractor()
+
+
+    //variables livedata para cargar los datos en el carrousel de bienvenida
+    //martin re
+    private val _activities: MutableLiveData<List<CarouselItem>> = MutableLiveData()
+    val activities: LiveData<List<CarouselItem>> = _activities
+    //variables livedata para ocultar carousel en caso de que la lista de actividades
+    //este vacia
+    //martin re
+    private val _carouselIsGone: MutableLiveData<Boolean> = MutableLiveData()
+    val carouselIsgone: MutableLiveData<Boolean> = _carouselIsGone
 
     private var getActivitiesInteractor = GetActivitiesInteractor()
 
@@ -25,6 +37,7 @@ class HomeViewModel : ViewModel() {
     //martin re
     private val _carouselIsGone: MutableLiveData<Boolean> = MutableLiveData()
     val carouselIsgone: MutableLiveData<Boolean> = _carouselIsGone
+
 
     //metodo de creacion viewmodel, iniciar los metodos privados de viewmodel actual
     //martin re
