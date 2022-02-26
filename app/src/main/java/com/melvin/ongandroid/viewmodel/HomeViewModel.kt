@@ -4,8 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.melvin.ongandroid.businesslogic.GetActivitiesInteractor
 
-import com.melvin.ongandroid.bussinesslogic.GetActivitiesInteractor
+
 import com.melvin.ongandroid.model.apimodel.ActivityModel
 import kotlinx.coroutines.launch
 import org.imaginativeworld.whynotimagecarousel.CarouselItem
@@ -29,10 +30,7 @@ class HomeViewModel : ViewModel() {
     //metodo de creacion viewmodel, iniciar los metodos privados de viewmodel actual
     //martin re
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 1cfd369e6059bcfe9565db44a03885ea475fda8a
     //metodo que obtiene la lista de actividades desde el interactor
     //martin re
     fun getListActivities(){
