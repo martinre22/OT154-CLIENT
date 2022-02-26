@@ -29,8 +29,6 @@ class HomeViewModel : ViewModel() {
     //metodo de creacion viewmodel, iniciar los metodos privados de viewmodel actual
     //martin re
 
-
-
     //metodo que obtiene la lista de actividades desde el interactor
     //martin re
     fun getListActivities(){
