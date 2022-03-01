@@ -121,7 +121,6 @@
             android:textAllCaps="false"
             android:layout_marginStart="2dp"
             android:textSize="@dimen/size_textfield_fragment_contactus"></com.google.android.material.button.MaterialButton>
-
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
