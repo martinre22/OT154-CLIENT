@@ -1,5 +1,6 @@
 package com.melvin.ongandroid.view.contact_us
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -12,6 +13,7 @@ import com.melvin.ongandroid.R
 import com.melvin.ongandroid.databinding.FragmentContactUsBinding
 import com.melvin.ongandroid.databinding.FragmentHomeBinding
 import com.melvin.ongandroid.utils.Validator
+import com.melvin.ongandroid.view.signup_user.SignUpUserActivity
 
 class ContactUs : Fragment(R.layout.fragment_contact_us) {
     lateinit var binding: FragmentContactUsBinding
@@ -24,6 +26,7 @@ class ContactUs : Fragment(R.layout.fragment_contact_us) {
         binding.textfieldEmailFragmentContactUs.addTextChangedListener(textWatcher)
         binding.textfieldFirstnameFragmentContactUs.addTextChangedListener(textWatcher)
         binding.textfieldLastnameFragmentContactUs.addTextChangedListener(textWatcher)
+
     }
 
     private val textWatcher = object : TextWatcher {
