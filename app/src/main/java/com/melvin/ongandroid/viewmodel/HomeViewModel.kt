@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.melvin.ongandroid.businesslogic.GetActivitiesInteractor
 import com.melvin.ongandroid.model.apimodel.ActivityModel
 import kotlinx.coroutines.launch
-import org.imaginativeworld.whynotimagecarousel.CarouselItem
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 
 class HomeViewModel : ViewModel() {
