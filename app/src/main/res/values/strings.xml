@@ -13,8 +13,9 @@
     <string name="testimonials_tittle">TESTIMONIOS</string>
     <string name="welcome_txt">Bienvenidos a SOMOS MAS ONG</string>
     <string name="textLoading">Loading...</string>
-    <string name="testimoniales_tittle">Testimonios</string>
+    <string name="lastest_news">Ultimas noticias</string>
     <string name="error_textview_message">Error General</string>
+    <string name="testimoniales_tittle">Testimonios</string>
     <string name="error_bt_retry">Reintentar</string>
     <string name="contrasenia">Contraseña</string>
     <string name="email">Email</string>
