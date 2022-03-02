@@ -10,6 +10,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
+        android:theme="@style/Theme.ONGAndroid">
+
+        <activity
+=======
 
         android:theme="@style/Theme.ONGAndroid"
 
@@ -28,6 +33,7 @@
 
 
         <activity
+>>>>>>> 4e97604a202a9875838e160841d420f585ca6376
             android:name=".view.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
