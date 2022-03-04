@@ -16,7 +16,7 @@ class RetrofitInstance {
     }
 }
 
-}
+/*}
 
 
     private fun getOkHttpClient(): OkHttpClient {
@@ -28,6 +28,6 @@ class RetrofitInstance {
 
         return client.build()
 
-    }
+    }*/
 
 
