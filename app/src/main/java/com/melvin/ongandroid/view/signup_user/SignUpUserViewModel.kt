@@ -1,4 +1,4 @@
-package com.melvin.ongandroid.view.UserRegisterView
+package com.melvin.ongandroid.view.signup_user
 
 import android.content.Context
 import android.widget.Toast
