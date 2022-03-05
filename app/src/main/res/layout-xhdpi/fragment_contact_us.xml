@@ -8,6 +8,22 @@
     tools:context=".view.contact_us.ContactUs"
     android:padding="@dimen/padding_main_constraint_layout_fragment_contactus">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/i_progress_bar"
+            layout="@layout/loading" />
+
+        <include
+            android:id="@+id/i_generic_error"
+            layout="@layout/generic_error" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/textview_title_fragment_contact_us"
         android:layout_width="match_parent"

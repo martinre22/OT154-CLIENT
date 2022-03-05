@@ -7,6 +7,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".view.contact_us.ContactUs"
     android:padding="@dimen/padding_main_constraint_layout_fragment_contactus">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/i_progress_bar"
+            layout="@layout/loading" />
+
+        <include
+            android:id="@+id/i_generic_error"
+            layout="@layout/generic_error" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top_fragment_contactus"
