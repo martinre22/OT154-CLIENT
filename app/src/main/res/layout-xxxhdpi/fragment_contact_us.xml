@@ -49,7 +49,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="1dp"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_layout_lastname_contactus"
+        app:layout_constraintEnd_toStartOf="@+id/text_input_layout_phone_contactus"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_title_fragment_contact_us">
@@ -65,7 +65,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_lastname_contactus"
+        android:id="@+id/text_input_layout_phone_contactus"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -76,11 +76,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textview_title_fragment_contact_us">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textfield_lastname_fragment_contact_us"
+            android:id="@+id/textfield_phone_fragment_contact_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/string_lastname_textfield_fragment_contactus"
-            android:inputType="text"
+            android:hint="@string/string_phone_textfield_fragment_contactus"
+            android:inputType="phone"
             android:textSize="@dimen/size_textfield_fragment_contactus" />
     </com.google.android.material.textfield.TextInputLayout>
 
