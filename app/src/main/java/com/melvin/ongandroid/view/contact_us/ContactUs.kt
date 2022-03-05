@@ -136,13 +136,13 @@ class ContactUs : Fragment(R.layout.fragment_contact_us) {
 
     private fun handlerProgressBarVisibility(show: Boolean) {
         with(binding) {
-            iProgressBar?.progressBar?.visibility = if (show) View.VISIBLE else View.GONE
+            //iProgressBar?.progressBar?.visibility = if (show) View.VISIBLE else View.GONE
         }
     }
 
     private fun handlerErrorVisibility(show: Boolean) {
         with(binding) {
-            iGenericError?.clGenericError?.visibility = if (show) View.VISIBLE else View.GONE
+            //iGenericError?.clGenericError?.visibility = if (show) View.VISIBLE else View.GONE
         }
     }
 
