@@ -65,4 +65,9 @@
     <string name="string_error_password_not_equals_user_register_view">Passwords are not the same</string>
     <string name="cd_image_logo_user_register_view">logo</string>
 
+    <!---MemberDetailFragment-->
+    <string name="string_title_member_detail_fragment">Detalle</string>
+    <string name="string_textview_member_name_fragment_member_detail">Nombre Miembro</string>
+    <string name="string_textview_member_description_fragment_member_detail">Descripcion</string>
+
 </resources>

@@ -2,9 +2,7 @@ package com.melvin.ongandroid.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import com.melvin.ongandroid.R
 import com.melvin.ongandroid.databinding.FragmentMemberDetailBinding
@@ -21,6 +19,7 @@ class MemberDetail : Fragment(R.layout.fragment_member_detail) {
         super.onCreate(savedInstanceState)
         val request = arguments?.getString("auto")
         Toast.makeText(context, request.toString(), Toast.LENGTH_SHORT).show()
+        activity?.setTitle(R.string.string_title_member_detail_fragment)
     }
 
 
