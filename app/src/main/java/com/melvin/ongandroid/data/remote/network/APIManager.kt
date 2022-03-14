@@ -19,6 +19,7 @@ class APIManager {
         return getRetrofitInstance().saveContact(contact)
     }
 
+
     private fun getRetrofitInstance(): APIService {
         return RetrofitInstance.getRetrofit().create(APIService::class.java)
     }

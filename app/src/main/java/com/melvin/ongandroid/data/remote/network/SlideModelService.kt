@@ -2,12 +2,9 @@ package com.melvin.ongandroid.data.remote.network
 
 
 import com.melvin.ongandroid.data.remote.response.SlideModelResponse
-
-
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Response
-
 
 
 /**
@@ -26,8 +23,5 @@ class SlideModelService {
         }
 
     }
-
-
-
 
 }
