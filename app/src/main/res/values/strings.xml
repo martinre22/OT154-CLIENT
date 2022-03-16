@@ -69,5 +69,7 @@
     <string name="string_title_member_detail_fragment">Detalle</string>
     <string name="string_textview_member_name_fragment_member_detail">Nombre Miembro</string>
     <string name="string_textview_member_description_fragment_member_detail">Descripcion</string>
+    <string name="string_textview_facebook_url_fragment_member_detail">facebookurl</string>
+    <string name="string_textview_linkedin_url_fragment_member_detail">linkedinurl</string>
 
 </resources>

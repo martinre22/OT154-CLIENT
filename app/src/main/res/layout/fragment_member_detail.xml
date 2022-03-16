@@ -7,8 +7,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.MemberDetail">
 
-
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top_parent_fragment_member_detail"
         android:layout_width="wrap_content"
@@ -69,10 +67,80 @@
         android:text="@string/string_textview_member_description_fragment_member_detail"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/text_view_name_member_fragment_member_detail"
-
         android:textSize="@dimen/size_textview_member_name_fragment_member_detail"
         android:textColor="@color/black">
     </TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_description_member_fragment_member_detail">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_contain_link_facebook_fragment_member_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/app_name"
+                android:padding="1dp"
+                android:src="@drawable/facebook_logo"></ImageView>
+
+            <TextView
+                android:id="@+id/text_view_link_facebook_url_fragment_member_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/string_textview_facebook_url_fragment_member_detail"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/size_textview_member_name_fragment_member_detail"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_contain_link_linkedin_fragment_member_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_layout_contain_link_facebook_fragment_member_detail">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/app_name"
+                android:padding="1dp"
+                android:src="@drawable/linkedin_logo"></ImageView>
+
+            <TextView
+                android:id="@+id/text_view_link_linkedin_url_fragment_member_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/string_textview_linkedin_url_fragment_member_detail"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/size_textview_member_name_fragment_member_detail"></TextView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
 
 
     <LinearLayout
