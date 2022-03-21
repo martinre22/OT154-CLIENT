@@ -55,6 +55,7 @@ class SignUpUserViewModel : ViewModel() {
         retrofit.postNewUser(email, name, password)
             .enqueue(object :
                 Callback<NewUserResponse> {
+
                 override fun onFailure(call: Call<NewUserResponse>, t: Throwable) {
                     FirebaseEvent.setLogEvent(context, "sign_up_error")//Evento firebase. Error de registro
                 }
@@ -67,8 +68,8 @@ class SignUpUserViewModel : ViewModel() {
                         FirebaseEvent.setLogEvent(context, "sign_up_success")//Evento firebase.Registro exitoso
                         Toast.makeText(context, response.body()?.message, Toast.LENGTH_LONG).show()
                     }else{
-                        Toast.makeText(context, response.body()?.message, Toast.LENGTH_LONG).show()
                         FirebaseEvent.setLogEvent(context, "sign_up_error")//Evento firebase. Error de registro
+                        Toast.makeText(context, response.body()?.message, Toast.LENGTH_LONG).show()
                     }
 
                 }
