@@ -27,10 +27,10 @@ class SignUpUserActivity : AppCompatActivity() {
         setObserver()
 
         binding.buttonRegisterUserRegisterView.setOnClickListener {
-            val username = "TO-DO"
+            val username = binding.textFieldUsernameRegisterView.text.toString().trim()
             val email = binding.textFieldEmailUserRegisterView.text.toString().trim()
             val password = binding.textFieldPasswordUserRegisterView.text.toString().trim()
-            //viewModel.registerNewUser(username, email, password, this)
+            viewModel.registerNewUser(username, email, password, this)
         }
     }
 
