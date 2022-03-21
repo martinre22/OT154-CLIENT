@@ -7,7 +7,6 @@
 package com.melvin.ongandroid.homeviewmodeltest
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.melvin.ongandroid.data.repository.GetActivitiesInteractor
 import com.melvin.ongandroid.data.local.model.ActivityModel
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
