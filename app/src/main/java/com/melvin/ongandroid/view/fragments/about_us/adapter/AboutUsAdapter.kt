@@ -10,7 +10,8 @@ import com.melvin.ongandroid.view.fragments.about_us.interfaces.ListenerOnClick
 class AboutUsAdapter(private var membersList: List<MembersModel>, private val click: ListenerOnClick) : RecyclerView.Adapter<AboutUsViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AboutUsViewHolder {
        var layoutInflater= LayoutInflater.from(parent.context)
-       return AboutUsViewHolder(layoutInflater.inflate(R.layout.item_about_us, parent, false), click)
+       return AboutUsViewHolder(layoutInflater.inflate(R.layout.item_about_us, parent, false),
+           click, membersList)
     }
 
     override fun onBindViewHolder(holder: AboutUsViewHolder, position: Int) {

@@ -1,8 +1,8 @@
 package com.melvin.ongandroid.view.fragments.about_us.interfaces
 
+import com.melvin.ongandroid.data.local.model.MembersModel
 
-import com.melvin.ongandroid.R
 
 interface ListenerOnClick {
-    fun navigateToMemberDetailsFragment()
+    fun navigateToMemberDetailsFragment(member: MembersModel)
 }
