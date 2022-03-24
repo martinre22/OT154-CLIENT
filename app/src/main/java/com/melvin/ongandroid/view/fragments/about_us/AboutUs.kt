@@ -2,6 +2,7 @@ package com.melvin.ongandroid.view.fragments.about_us
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -46,8 +47,14 @@ class AboutUs : Fragment(R.layout.fragment_about_us), ListenerOnClick {
         }
     }
 
-    override fun navigateToMemberDetailsFragment(){
-        findNavController().navigate(R.id.action_navFragmentAboutUs_to_navFragmentDetailsMember,null)
+
+
+    override fun navigateToMemberDetailsFragment(member: MembersModel){
+        val obMember: MembersModel = member
+        val bundle = bundleOf("detailsMember" to obMember)
+        findNavController().navigate(R.id.action_navFragmentAboutUs_to_navFragmentDetailsMember, bundle)
+
+
     }
 
 
