@@ -10,4 +10,5 @@
     <dimen name="layout_height_logo_fragment_member_detail">90dp</dimen>
     <dimen name="size_textview_member_name_fragment_member_detail">20sp</dimen>
     <dimen name="size_textview_member_link_fragment_member_detail">16sp</dimen>
+
 </resources>

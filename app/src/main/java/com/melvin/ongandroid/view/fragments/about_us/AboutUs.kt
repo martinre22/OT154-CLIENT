@@ -47,10 +47,13 @@ class AboutUs : Fragment(R.layout.fragment_about_us), ListenerOnClick {
         }
     }
 
+
+
     override fun navigateToMemberDetailsFragment(member: MembersModel){
         val obMember: MembersModel = member
         val bundle = bundleOf("detailsMember" to obMember)
         findNavController().navigate(R.id.action_navFragmentAboutUs_to_navFragmentDetailsMember, bundle)
+
 
     }
 

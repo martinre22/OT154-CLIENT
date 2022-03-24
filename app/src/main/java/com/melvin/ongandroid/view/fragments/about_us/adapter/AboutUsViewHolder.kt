@@ -7,9 +7,11 @@ import com.melvin.ongandroid.data.local.model.MembersModel
 import com.melvin.ongandroid.databinding.ItemAboutUsBinding
 import com.melvin.ongandroid.view.fragments.about_us.interfaces.ListenerOnClick
 
+
 class AboutUsViewHolder(view: View,
                         private val click: ListenerOnClick,
                         private var membersList: List<MembersModel>): RecyclerView.ViewHolder(view), View.OnClickListener{
+
     private val binding = ItemAboutUsBinding.bind(view)
 
     init {

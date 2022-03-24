@@ -18,17 +18,20 @@ class MemberDetailsFragment : Fragment(R.layout.fragment_member_details) {
     private lateinit var request: MembersModel
     val activityScope = CoroutineScope(Dispatchers.Main)
 
+    
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMemberDetailsBinding.bind(view)
         request = arguments?.getParcelable<MembersModel>("detailsMember")!!
         setDetailsMember()
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activity?.setTitle(R.string.string_title_member_detail_fragment)
     }
+
 
     private fun setDetailsMember(){
         binding.textViewNameMemberFragmentMemberDetail.text = request.name
@@ -49,8 +52,5 @@ class MemberDetailsFragment : Fragment(R.layout.fragment_member_details) {
         }
 
     }
-
-
-
 
 }
