@@ -88,21 +88,25 @@ class LoginActivity : AppCompatActivity() {
         binding.etPassword.addTextChangedListener(logInTextWatcher())
 
         binding.btnSignUp.setOnClickListener {
+            viewModel.setLogsFirebaseEvents(this, "sign_up_pressed")
             startActivity(Intent(this@LoginActivity, SignUpUserActivity::class.java))
         }
 
         binding.btnLogin.setOnClickListener {
             val email = binding.etEmail.text.toString().trim()
             val password = binding.etPassword.text.toString().trim()
+            viewModel.setLogsFirebaseEvents(this, "log_in_pressed")
             Log.d("VALIDATION", "EMAIL: ${email}, PASSWORD: ${password}")
             viewModel.login(email, password)
         }
 
         binding.ibFacebook.setOnClickListener {
+            viewModel.setLogsFirebaseEvents(this, "facebook_pressed")
             loginWithFacebook()
         }
 
         binding.ibGoogle.setOnClickListener {
+            viewModel.setLogsFirebaseEvents(this, "gmail_pressed")
             loginWithGoogle()
         }
     }
@@ -169,7 +173,7 @@ class LoginActivity : AppCompatActivity() {
         viewModel.loginResponse.observe(this, {
             when(it){
                 is ResourceLogin.Success -> {
-
+                    viewModel.setLogsFirebaseEvents(this, "log_in_success")
                     lifecycleScope.launch {
                         loginUserPreferences.saveTokenUser(it.value.data.token)
                     }
@@ -177,7 +181,10 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this ,it.value.message, Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, MainActivity::class.java))
                 }
-                is ResourceLogin.Failure -> { Toast.makeText(this, "Error al cargar. ", Toast.LENGTH_LONG).show()}
+                is ResourceLogin.Failure -> {
+                    viewModel.setLogsFirebaseEvents(this, "log_in_error")
+                    Toast.makeText(this, "Error al cargar. ", Toast.LENGTH_LONG).show()
+                }
             }
         })
     }
