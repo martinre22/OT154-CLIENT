@@ -45,9 +45,12 @@ class MemberDetailsFragment : Fragment(R.layout.fragment_member_details), AboutU
         binding.textViewDescriptionMemberFragmentMemberDetail.text = request.description
         binding.textViewLinkFacebookUrlFragmentMemberDetail.text = request.facebookUrl
         binding.textViewLinkLinkedinUrlFragmentMemberDetail.text = request.linkedinUrl
-
-        facebookLink(request.facebookUrl.toString())
-        linkedinLink(request.linkedinUrl.toString())
+        binding.textViewLinkFacebookUrlFragmentMemberDetail.setOnClickListener {
+            facebookLink(request.facebookUrl.toString())
+        }
+        binding.textViewLinkLinkedinUrlFragmentMemberDetail.setOnClickListener {
+            linkedinLink(request.linkedinUrl.toString())
+        }
     }
 
     private suspend fun setProfileImage(){
