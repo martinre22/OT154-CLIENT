@@ -5,20 +5,30 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.melvin.ongandroid.R
 import com.melvin.ongandroid.data.local.model.MembersModel
-import com.melvin.ongandroid.view.fragments.about_us.interfaces.ListenerOnClick
 
-class AboutUsAdapter(private var membersList: List<MembersModel>, private val click: ListenerOnClick) : RecyclerView.Adapter<AboutUsViewHolder>(){
+class AboutUsAdapter(private val aboutUsListener: AboutUsListener): RecyclerView.Adapter<AboutUsViewHolder>() {
+    private var members: MutableList<MembersModel> = mutableListOf()
+
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AboutUsViewHolder {
-       var layoutInflater= LayoutInflater.from(parent.context)
-       return AboutUsViewHolder(layoutInflater.inflate(R.layout.item_about_us, parent, false),
-           click, membersList)
-    }
+        val context = parent.context
+        val inflater = LayoutInflater.from(context)
+        val view = inflater.inflate(R.layout.item_about_us, parent, false)
+        return AboutUsViewHolder(view, aboutUsListener)
+            }
+
 
     override fun onBindViewHolder(holder: AboutUsViewHolder, position: Int) {
-        val item = membersList[position]
+        val item = members[position]
         holder.render(item)
     }
 
-    override fun getItemCount(): Int = membersList.size
+    override fun getItemCount(): Int = members.size
+
+    fun setMembers(members: MutableList<MembersModel>) {
+        this.members = members
+        notifyDataSetChanged()
+    }
 
 }
