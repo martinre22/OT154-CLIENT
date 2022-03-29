@@ -21,11 +21,11 @@ import com.melvin.ongandroid.data.remote.network.RetrofitInstance
 import com.melvin.ongandroid.data.repository.login.ResourceLogin
 import com.melvin.ongandroid.data.repository.login.preferences.LoginUserPreferences
 import com.melvin.ongandroid.data.repository.login.repository.LoginRepository
-import com.melvin.ongandroid.databinding.LogInBinding
 import com.melvin.ongandroid.view.MainActivity
 import com.melvin.ongandroid.view.activities.signup_user.SignUpUserActivity
 import com.melvin.ongandroid.application.Validator
 import com.melvin.ongandroid.data.remote.network.APIService
+import com.melvin.ongandroid.databinding.LogInBinding
 import com.melvin.ongandroid.presentation.login.LoginViewModel
 import com.melvin.ongandroid.presentation.login.base.LoginViewModelFactory
 import kotlinx.coroutines.launch
@@ -49,6 +49,7 @@ import com.google.firebase.ktx.Firebase
  */
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var binding: LogInBinding
 
     private val viewModel by viewModels<LoginViewModel>{LoginViewModelFactory(
         LoginRepository(
@@ -63,7 +64,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
     
-    private lateinit var binding: LogInBinding
     private lateinit var loginUserPreferences: LoginUserPreferences
     private val callbackManager = CallbackManager.Factory.create()
 

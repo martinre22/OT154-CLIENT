@@ -1,4 +1,4 @@
-package com.melvin.ongandroid.presentation.contact_us
+package com.melvin.ongandroid.presentation.contactus
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
