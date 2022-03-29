@@ -73,6 +73,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         loginUserPreferences = LoginUserPreferences(this)
 
+        binding.etEmail.requestFocus()
+
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken("127892751657-58gdpssca84itm52p4omic1poj55562b.apps.googleusercontent.com")
             .requestEmail()
@@ -144,6 +146,7 @@ class LoginActivity : AppCompatActivity() {
                     val user = auth.currentUser
                     Toast.makeText(applicationContext, "Bienvenido ${user.toString()}", Toast.LENGTH_LONG).show()
                     startActivity(Intent(applicationContext, MainActivity::class.java))
+                    finish()
                 } else {
                     // If sign in fails, display a message to the user.
                     showErrorDialog("Error Google", "Account not Existing")
@@ -180,6 +183,7 @@ class LoginActivity : AppCompatActivity() {
 
                     Toast.makeText(this ,it.value.message, Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, MainActivity::class.java))
+                    finish()
                 }
                 is ResourceLogin.Failure -> {
                     viewModel.setLogsFirebaseEvents(this, "log_in_error")
@@ -216,6 +220,9 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    override fun finish() {
+        super.finish()
+    }
     //Login with facebook
     fun loginWithFacebook(){
         LoginManager.getInstance().logInWithReadPermissions(this, callbackManager,listOf("email"))
@@ -236,6 +243,7 @@ class LoginActivity : AppCompatActivity() {
                         FirebaseAuth.getInstance().signInWithCredential(credential).addOnCompleteListener {
                             if(it.isSuccessful){
                                 startActivity(Intent(applicationContext, MainActivity::class.java))
+                                finish()
                             }
                             else{
                                 showErrorDialog("Error Facebook", "Account not Existing")
