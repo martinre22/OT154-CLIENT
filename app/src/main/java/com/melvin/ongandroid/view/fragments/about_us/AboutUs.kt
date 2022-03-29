@@ -24,9 +24,10 @@ import com.melvin.ongandroid.presentation.about_us.AboutUsViewModel
 import com.melvin.ongandroid.presentation.about_us.AboutUsViewModelFactory
 import com.melvin.ongandroid.view.fragments.about_us.adapter.AboutUsAdapter
 import com.melvin.ongandroid.view.fragments.about_us.adapter.AboutUsListener
+import com.melvin.ongandroid.view.fragments.about_us.interfaces.ListenerOnClick
 
 
-class AboutUs : Fragment(R.layout.fragment_about_us), AboutUsListener {
+class AboutUs : Fragment(R.layout.fragment_about_us), ListenerOnClick {
 
 
     private lateinit var binding: FragmentAboutUsBinding
@@ -117,7 +118,7 @@ class AboutUs : Fragment(R.layout.fragment_about_us), AboutUsListener {
         }
     }
 
-    fun navigateToMemberDetailsFragment(member: MembersModel){
+    override fun navigateToMemberDetailsFragment(member: MembersModel){
         val obMember: MembersModel = member
         val bundle = bundleOf("detailsMember" to obMember)
         findNavController().navigate(R.id.action_navFragmentAboutUs_to_navFragmentDetailsMember, bundle)
@@ -163,15 +164,7 @@ class AboutUs : Fragment(R.layout.fragment_about_us), AboutUsListener {
         }
     }
 
-    override fun facebookLink(url: String) {
-        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-        ContextCompat.startActivity(requireContext(),browserIntent,null)
-    }
 
-    override fun linkedinLink(url: String) {
-        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-        ContextCompat.startActivity(requireContext(),browserIntent,null)
-    }
 
 
 }
